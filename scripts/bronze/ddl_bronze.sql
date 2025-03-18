@@ -109,8 +109,3 @@ CREATE TABLE bronze.erp_px_cat_g1v2 (
 );
 GO
 
-
-
-use DataWarehouse;
-
-SELECT * FROM bronze.crm_cust_info;
