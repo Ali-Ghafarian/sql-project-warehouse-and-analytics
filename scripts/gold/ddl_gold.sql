@@ -17,6 +17,9 @@ Usage:
 -- =============================================================================
 -- Create Dimension: gold.dim_customers
 -- =============================================================================
+USE DataWarehouse;
+GO
+
 IF OBJECT_ID('gold.dim_customers', 'V') IS NOT NULL
     DROP VIEW gold.dim_customers;
 GO
@@ -31,8 +34,8 @@ SELECT
     la.cntry                           AS country,
     ci.cst_marital_status              AS marital_status,
     CASE 
-        WHEN ci.cst_gndr != 'n/a' THEN ci.cst_gndr -- CRM is the primary source for gender
-        ELSE COALESCE(ca.gen, 'n/a')  			   -- Fallback to ERP data
+        WHEN ci.cst_gndr != 'Unknown' THEN ci.cst_gndr -- CRM is the primary source for gender
+        ELSE COALESCE(ca.gen, 'Unknown')  			   -- Fallback to ERP data
     END                                AS gender,
     ca.bdate                           AS birthdate,
     ci.cst_create_date                 AS create_date
