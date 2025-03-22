@@ -5,13 +5,23 @@ DDL Script: Create Silver Tables
 Script Purpose:
     This script creates tables in the 'silver' schema, dropping existing tables 
     if they already exist.
-    - Metadata column is added to each table (dwh_create_date ).
+    - Metadata column is added to each table (dwh_create_date).
+
+Changes from Bronze Layer:
+    1. silver.crm_prd_info:
+       - Added cat_id column derived from prd_key
+       - Changed prd_start_dt and prd_end_dt from DATETIME to DATE
+
+    2. silver.crm_sales_details:
+       - Changed sls_order_dt from INT to DATE
+       - Changed sls_ship_dt from INT to DATE
+       - Changed sls_due_dt from INT to DATE
 ===============================================================================
 */
 
-
 USE DataWarehouse;
 GO
+
 IF OBJECT_ID('silver.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE silver.crm_cust_info;
 GO
@@ -98,4 +108,3 @@ CREATE TABLE silver.erp_px_cat_g1v2 (
     dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 GO
-
