@@ -73,7 +73,7 @@ This phase focuses on:
 │   └── EDA_adv_Analysis.ipynb            # Main analysis notebook with insights
 ├── data architecture and engineering      # Core data warehouse implementation
 │   ├── database_init.sql                 # Initial database setup
-│   ├── dim_fact_gold.ipynb              # Gold layer dimensional modeling
+│   ├── dim_fact_gold.ipynb              # Gold layer dimensions and fact views
 │   ├── Transformation_bronze_to_silver.ipynb  # Bronze to silver transformation
 │   ├── scripts_medallion                 # SQL scripts by medallion layer
 │   │   ├── bronze                        # Raw data ingestion layer
