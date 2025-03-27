@@ -93,11 +93,11 @@ This phase focuses on:
 │       └── quality_checks_silver.sql     # Silver layer quality tests
 ├── datasets                              # Source data files
 │   ├── source_crm                        # Customer relationship management
-│   │   ├── cust_info.csv                # Customer information
+│   │   ├── cust_info.csv                # Customer information (master)
 │   │   ├── prd_info.csv                 # Product information
 │   │   └── sales_details.csv            # Sales transactions
 │   └── source_erp                        # Enterprise resource planning
-│       ├── CUST_AZ12.csv                # Customer master data
+│       ├── CUST_AZ12.csv                # Customer data
 │       ├── LOC_A101.csv                 # Location information
 │       └── PX_CAT_G1V2.csv              # Product categories
 └── Docs                                  # Documentation
