@@ -32,7 +32,7 @@ This phase covers:
 - **Data Modeling & Data Marts**: Implementing star schema designs and medallion architecture for scalable data marts.
 - **ETL Processes & Stored Procedures**: Employing stored procedures to ensure reusability in loading and transforming data.
 - **Quality Checks & Data Cleaning**: Extensive use of SQL techniques such as window functions, aggregate functions, date & time functions, string and numeric operations, NULL handling, subqueries, and CTEs to enforce data integrity and standardization.
-(check [Transformation_bronze_to_silver.ipynb](data%20architecture%20and%20engineering/Transformation_bronze_to_silver.ipynb))
+(check [Transformation_bronze_to_silver.ipynb](data%20architecture%20and%20engineering/Transformation_bronze_to_silver%20.ipynb))
     - **Transformation Process (Mostly done in Silver layer)**:
         - **Main Components**: Data Enrichment, Data Integration, Derived Columns, Data Normalization & Standardization, Business Rules & Logic, Data Aggregations
         - **Data Cleansing Breakdown**: Remove Duplicates, Data Filtering, Handling Missing Data, Handling Invalid Values, Handling Unwanted Spaces, Outlier Detection, Data Type Casting
